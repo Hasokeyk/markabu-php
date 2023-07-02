@@ -6,6 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Hasokeyk\\Markabul\\MarkabulMarketplace' => array($baseDir . '/src/markabu/marketplace'),
-    'Hasokeyk\\Markabul\\' => array($baseDir . '/src/markabu'),
+    'Hasokeyk\\Markabu\\MarkabuMarketplace' => array($baseDir . '/src/markabu/marketplace'),
+    'Hasokeyk\\Markabu\\' => array($baseDir . '/src/markabu'),
 );

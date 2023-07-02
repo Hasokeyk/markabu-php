@@ -2,7 +2,7 @@
 
     //Source : https://developers.markabu.com/docs/marketplace/urun-entegrasyonu/markabu-marka-listesi
 
-    use Hasokeyk\Markabul\Markabul;
+    use Hasokeyk\Markabu\Markabu;
 
     require "vendor/autoload.php";
 
@@ -10,9 +10,9 @@
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabu = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabu($supplierId, $username, $password);
 
-    $markabu_marketplace_addresses = $markabu->marketplace->MarkabulMarketplaceAddresses();
+    $markabu_marketplace_addresses = $markabu->marketplace->MarkabuMarketplaceAddresses();
 
     $addresses = $markabu_marketplace_addresses->get_my_addresses();
     print_r($addresses);

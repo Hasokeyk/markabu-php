@@ -22,7 +22,7 @@
   },
   "autoload"          : {
     "psr-4" : {
-      "Hasokeyk\\Markabul\\" : "src/markabu"
+      "Hasokeyk\\Markabu\\" : "src/markabu"
     }
   },
   "minimum-stability" : "stable"

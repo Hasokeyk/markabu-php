@@ -2,7 +2,7 @@
 
     //Source : https://developers.markabu.com/tr/marketplace-entegrasyonu/soru-cevap-entegrasyonu/musteri-sorularini-cekme
 
-    use Hasokeyk\Markabul\Markabul;
+    use Hasokeyk\Markabu\Markabu;
 
     require "vendor/autoload.php";
 
@@ -10,9 +10,9 @@
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabu = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabu($supplierId, $username, $password);
 
-    $markabu_marketplace_customer_questions = $markabu->marketplace->MarkabulMarketplaceCustomerQuestions();
+    $markabu_marketplace_customer_questions = $markabu->marketplace->MarkabuMarketplaceCustomerQuestions();
 
     $filter             = [
         'status' => 'WAITING_FOR_ANSWER', //WAITING_FOR_ANSWER, WAITING_FOR_APPROVE, ANSWERED, REPORTED, REJECTED

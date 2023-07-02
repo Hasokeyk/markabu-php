@@ -1,6 +1,6 @@
 <?php
 
-    use Hasokeyk\Markabul\Markabul;
+    use Hasokeyk\Markabu\Markabu;
 
     require "vendor/autoload.php";
 
@@ -8,9 +8,9 @@
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabu = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabu($supplierId, $username, $password);
 
-    $markabu_marketplace_categories = $markabu->marketplace->MarkabulMarketplaceCategories();
+    $markabu_marketplace_categories = $markabu->marketplace->MarkabuMarketplaceCategories();
 
     $categories = $markabu_marketplace_categories->get_my_categories();
     print_r($categories);

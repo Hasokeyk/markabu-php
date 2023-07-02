@@ -1,10 +1,10 @@
 <?php
 
-    namespace Hasokeyk\Markabul\Marketplace;
+    namespace Hasokeyk\Markabu\Marketplace;
 
-    use Hasokeyk\Markabul\MarkabulRequest;
+    use Hasokeyk\Markabu\MarkabuRequest;
 
-    class MarkabulMarketplaceShipment{
+    class MarkabuMarketplaceShipment{
 
         public $supplierId;
         public $username;
@@ -17,7 +17,7 @@
         }
 
         public function request(){
-            return new MarkabulRequest($this->supplierId, $this->username, $this->password);
+            return new MarkabuRequest($this->supplierId, $this->username, $this->password);
         }
 
         public function get_shipment_companies(){
@@ -104,7 +104,7 @@
                 [
                     'ID'                => 17,
                     'company_shortname' => 'TEXMP',
-                    'company_name'     => 'Markabul Express Marketplace',
+                    'company_name'     => 'Markabu Express Marketplace',
                     'tax_number'        => '8590921777'
                 ],
                 [

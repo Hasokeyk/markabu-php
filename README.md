@@ -13,13 +13,13 @@ composer require hasokeyk/markabu
 
 # Kullanım
 
-### Markabul bağlantısı
+### Markabu bağlantısı
 Aşağıdaki örnek kod ile markabu bağlantınızı yapabilirsiniz
 
 ```php
 <?php
 
-    use Hasokeyk\Markabul\Markabul;
+    use Hasokeyk\Markabu\Markabu;
 
     require (__DIR__)."/vendor/autoload.php";
 
@@ -27,18 +27,18 @@ Aşağıdaki örnek kod ile markabu bağlantınızı yapabilirsiniz
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabu = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabu($supplierId, $username, $password);
 ```
 
-# Markabul Marketplace İşlemleri
+# Markabu Marketplace İşlemleri
 
 ### Markaları çekmek
-Markabul'a kayıtlı olan tüm markaların listesini bu kodlar ile çekebilirsiniz.
+Markabu'a kayıtlı olan tüm markaların listesini bu kodlar ile çekebilirsiniz.
 
 ```php
 <?php
 
-    use Hasokeyk\Markabul\Markabul;
+    use Hasokeyk\Markabu\Markabu;
 
     require (__DIR__)."/vendor/autoload.php";
 
@@ -46,21 +46,21 @@ Markabul'a kayıtlı olan tüm markaların listesini bu kodlar ile çekebilirsin
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabu = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabu($supplierId, $username, $password);
 
-    $markabu_marketplace_brands = $markabu->marketplace->MarkabulMarketplaceBrands();
+    $markabu_marketplace_brands = $markabu->marketplace->MarkabuMarketplaceBrands();
 
     $brands = $markabu_marketplace_brands->get_brands();
     print_r($brands);
 ```
 
 ### Marka Arama
-Markabul'a kendi markanızı veya başka markaları aratabilirsiniz.
+Markabu'a kendi markanızı veya başka markaları aratabilirsiniz.
 
 ```php
 <?php
 
-    use Hasokeyk\Markabul\Markabul;
+    use Hasokeyk\Markabu\Markabu;
 
     require (__DIR__)."/vendor/autoload.php";
 
@@ -68,21 +68,21 @@ Markabul'a kendi markanızı veya başka markaları aratabilirsiniz.
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabu = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabu($supplierId, $username, $password);
 
-    $markabu_marketplace_brands = $markabu->marketplace->MarkabulMarketplaceBrands();
+    $markabu_marketplace_brands = $markabu->marketplace->MarkabuMarketplaceBrands();
 
     $brands = $markabu_marketplace_brands->search_brand('Herkes Alıyo');
     print_r($brands);
 ```
 
 ### Kategorileri Çekmek
-Markabuldaki tüm kategorileri ve komisyonlarını çekebilirsiniz.
+Markabudaki tüm kategorileri ve komisyonlarını çekebilirsiniz.
 
 ```php
 <?php
 
-    use Hasokeyk\Markabul\Markabul;
+    use Hasokeyk\Markabu\Markabu;
 
     require (__DIR__)."/vendor/autoload.php";
 
@@ -90,21 +90,21 @@ Markabuldaki tüm kategorileri ve komisyonlarını çekebilirsiniz.
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabu = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabu($supplierId, $username, $password);
 
-    $markabu_marketplace_categories = $markabu->marketplace->MarkabulMarketplaceCategories();
+    $markabu_marketplace_categories = $markabu->marketplace->MarkabuMarketplaceCategories();
 
     $categories = $markabu_marketplace_categories->get_categories();
     print_r($categories);
 ```
 
 ### Tekli Kategori Bilgisi Çekmek
-Markabuldaki belirlediğiniz kategorilerin bilgilerini ve komisyonunu çekebilirsiniz.
+Markabudaki belirlediğiniz kategorilerin bilgilerini ve komisyonunu çekebilirsiniz.
 
 ```php
 <?php
 
-    use Hasokeyk\Markabul\Markabul;
+    use Hasokeyk\Markabu\Markabu;
 
     require (__DIR__)."/vendor/autoload.php";
 
@@ -112,20 +112,20 @@ Markabuldaki belirlediğiniz kategorilerin bilgilerini ve komisyonunu çekebilir
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabu = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabu($supplierId, $username, $password);
 
-    $markabu_marketplace_categories = $markabu->marketplace->MarkabulMarketplaceCategories();
+    $markabu_marketplace_categories = $markabu->marketplace->MarkabuMarketplaceCategories();
 
     $categories = $markabu_marketplace_categories->get_category_info(2610);
     print_r($categories);
 ```
 ### Siparişleri Çekmek
-Markabuldaki mağazanıza ait tüm siparişleri çekebilirsiniz.
+Markabudaki mağazanıza ait tüm siparişleri çekebilirsiniz.
 
 ```php
 <?php
 
-    use Hasokeyk\Markabul\Markabul;
+    use Hasokeyk\Markabu\Markabu;
 
     require (__DIR__)."/vendor/autoload.php";
 
@@ -133,9 +133,9 @@ Markabuldaki mağazanıza ait tüm siparişleri çekebilirsiniz.
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabu = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabu($supplierId, $username, $password);
 
-    $markabu_marketplace_order = $markabu->marketplace->MarkabulMarketplaceOrders();
+    $markabu_marketplace_order = $markabu->marketplace->MarkabuMarketplaceOrders();
 
     $filter = [
         'status' => 'Created',//Created, Picking, Invoiced, Shipped ,Cancelled, Delivered, UnDelivered, Returned, Repack, UnPacked, UnSupplied
@@ -145,12 +145,12 @@ Markabuldaki mağazanıza ait tüm siparişleri çekebilirsiniz.
 ```
 
 ### Ürünleri Çekmek
-Markabuldaki mağazanıza ait tüm ürünleri çekebilirsiniz.
+Markabudaki mağazanıza ait tüm ürünleri çekebilirsiniz.
 
 ```php
 <?php
 
-    use Hasokeyk\Markabul\Markabul;
+    use Hasokeyk\Markabu\Markabu;
 
     require (__DIR__)."/vendor/autoload.php";
 
@@ -158,9 +158,9 @@ Markabuldaki mağazanıza ait tüm ürünleri çekebilirsiniz.
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabu = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabu($supplierId, $username, $password);
 
-    $markabu_marketplace_products = $markabu->marketplace->MarkabulMarketplaceProducts();
+    $markabu_marketplace_products = $markabu->marketplace->MarkabuMarketplaceProducts();
 
     $filter    = [
         'approved' => 'true',

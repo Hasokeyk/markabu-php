@@ -2,7 +2,7 @@
 
     //Source : https://developers.markabu.com/docs/marketplace/urun-entegrasyonu/markabu-marka-listesi
 
-    use Hasokeyk\Markabul\Markabul;
+    use Hasokeyk\Markabu\Markabu;
 
     require "vendor/autoload.php";
 
@@ -10,9 +10,9 @@
     $username = 'XXXXXXXXXXXXXXXXXXXX';
     $password = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabu = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabu($supplierId, $username, $password);
 
-    $markabu_marketplace_brands = $markabu->marketplace->MarkabulMarketplaceBrands();
+    $markabu_marketplace_brands = $markabu->marketplace->MarkabuMarketplaceBrands();
 
     $brands = $markabu_marketplace_brands->search_brand('Herkesalıyo');
     print_r($brands);

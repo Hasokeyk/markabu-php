@@ -1,10 +1,10 @@
 <?php
 
-    namespace Hasokeyk\Markabul\Marketplace;
+    namespace Hasokeyk\Markabu\Marketplace;
 
-    use Hasokeyk\Markabul\MarkabulRequest;
+    use Hasokeyk\Markabu\MarkabuRequest;
 
-    class MarkabulMarketplaceAddresses{
+    class MarkabuMarketplaceAddresses{
 
         public $supplierId;
         public $username;
@@ -17,7 +17,7 @@
         }
 
         public function request(){
-            return new MarkabulRequest($this->supplierId, $this->username, $this->password);
+            return new MarkabuRequest($this->supplierId, $this->username, $this->password);
         }
 
         public function get_my_addresses(){

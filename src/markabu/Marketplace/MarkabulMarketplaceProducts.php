@@ -1,10 +1,10 @@
 <?php
 
-	namespace Hasokeyk\Markabul\Marketplace;
+	namespace Hasokeyk\Markabu\Marketplace;
 
-	use Hasokeyk\Markabul\MarkabulRequest;
+	use Hasokeyk\Markabu\MarkabuRequest;
 
-	class MarkabulMarketplaceProducts{
+	class MarkabuMarketplaceProducts{
 
 		public $supplierId;
 		public $username;
@@ -17,11 +17,11 @@
 		}
 
 		public function request(){
-			return new MarkabulRequest($this->supplierId, $this->username, $this->password);
+			return new MarkabuRequest($this->supplierId, $this->username, $this->password);
 		}
 
 		public function product(){
-			return new MarkabulMarketplaceProducts($this->supplierId, $this->username, $this->password);
+			return new MarkabuMarketplaceProducts($this->supplierId, $this->username, $this->password);
 		}
 
 		public function get_my_products($filter = []){

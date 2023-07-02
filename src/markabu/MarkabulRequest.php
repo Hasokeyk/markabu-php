@@ -1,10 +1,10 @@
 <?php
 
-    namespace Hasokeyk\Markabul;
+    namespace Hasokeyk\Markabu;
 
     use Exception;
 
-    class MarkabulRequest{
+    class MarkabuRequest{
 
         public $supplierId;
         public $username;
@@ -39,7 +39,7 @@
 
             $result = curl_exec($ch);
             if(empty($result)){
-                throw new Exception("Markabul boş yanıt döndürdü.");
+                throw new Exception("Markabu boş yanıt döndürdü.");
             }
 
             $result = json_decode($result);
@@ -75,7 +75,7 @@
 
             $result = curl_exec($ch);
             if(empty($result)){
-                throw new Exception("Markabul boş yanıt döndürdü.");
+                throw new Exception("Markabu boş yanıt döndürdü.");
             }
 
             $result = json_decode($result);
@@ -111,7 +111,7 @@
 
             $result = curl_exec($ch);
             if(empty($result)){
-                throw new Exception("Markabul boş yanıt döndürdü.");
+                throw new Exception("Markabu boş yanıt döndürdü.");
             }
 
             $result = json_decode($result);
@@ -121,7 +121,7 @@
         }
 
         protected function userAgent(){
-            return $this->supplierId.' - MarkabulSoft';
+            return $this->supplierId.' - MarkabuSoft';
         }
 
         protected function authorization(){

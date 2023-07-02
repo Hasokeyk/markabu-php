@@ -2,7 +2,7 @@
 
     //Source : https://developers.markabu.com/tr/marketplace-entegrasyonu/urun-entegrasyonu/urun-filtreleme
 
-    use Hasokeyk\Markabul\Markabul;
+    use Hasokeyk\Markabu\Markabu;
 
     require "vendor/autoload.php";
 
@@ -10,9 +10,9 @@
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabu = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabu($supplierId, $username, $password);
 
-    $markabu_marketplace_products = $markabu->marketplace->MarkabulMarketplaceProducts();
+    $markabu_marketplace_products = $markabu->marketplace->MarkabuMarketplaceProducts();
 
     $filter    = [
         'approved' => 'true',
