@@ -1,6 +1,6 @@
 <?php
 
-    //Source : https://developers.markabul.com/docs/marketplace/urun-entegrasyonu/markabul-kategori-listesi
+    //Source : https://developers.markabu.com/docs/marketplace/urun-entegrasyonu/markabu-kategori-listesi
 
     use Hasokeyk\Markabul\Markabul;
 
@@ -10,9 +10,9 @@
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_categories = $markabul->marketplace->MarkabulMarketplaceCategories();
+    $markabu_marketplace_categories = $markabu->marketplace->MarkabulMarketplaceCategories();
 
-    $categories = $markabul_marketplace_categories->get_categories();
+    $categories = $markabu_marketplace_categories->get_categories();
     print_r($categories);

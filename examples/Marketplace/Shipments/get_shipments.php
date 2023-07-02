@@ -1,6 +1,6 @@
 <?php
 
-    //Source : https://developers.markabul.com/tr/marketplace-entegrasyonu/siparis-entegrasyonu/siparis-paketlerini-cekme
+    //Source : https://developers.markabu.com/tr/marketplace-entegrasyonu/siparis-entegrasyonu/siparis-paketlerini-cekme
 
     use Hasokeyk\Markabul\Markabul;
 
@@ -10,9 +10,9 @@
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_shipments = $markabul->marketplace->MarkabulMarketplaceShipment();
+    $markabu_marketplace_shipments = $markabu->marketplace->MarkabulMarketplaceShipment();
 
-    $shipments = $markabul_marketplace_shipments->get_shipment_companies();
+    $shipments = $markabu_marketplace_shipments->get_shipment_companies();
     print_r($shipments);

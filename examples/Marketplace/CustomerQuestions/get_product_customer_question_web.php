@@ -1,6 +1,6 @@
 <?php
 
-    //Source : https://developers.markabul.com/tr/marketplace-entegrasyonu/urun-entegrasyonu/urun-filtreleme
+    //Source : https://developers.markabu.com/tr/marketplace-entegrasyonu/urun-entegrasyonu/urun-filtreleme
 
     use Hasokeyk\Markabul\Markabul;
 
@@ -10,12 +10,12 @@
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_customer_questions = $markabul->marketplace->MarkabulMarketplaceCustomerQuestions();
+    $markabu_marketplace_customer_questions = $markabu->marketplace->MarkabulMarketplaceCustomerQuestions();
 
-    //BARKOD NUMARASI MARKABULDA EKLENEN ÖZEL BİR NUMARADIR. BU NUMARAYI SADECE MAĞAZA SAHİPLERİ BİLEBİLİR
+    //BARKOD NUMARASI MARKABUDA EKLENEN ÖZEL BİR NUMARADIR. BU NUMARAYI SADECE MAĞAZA SAHİPLERİ BİLEBİLİR
     //O YÜZDEN BAŞKA BİR MAĞAZANIN ÜRÜNÜNÜN YORUMLARINI ÇEKEMEZSİNİZ
-    $products = $markabul_marketplace_customer_questions->get_product_question_web(123456789);
+    $products = $markabu_marketplace_customer_questions->get_product_question_web(123456789);
     print_r($products);
 

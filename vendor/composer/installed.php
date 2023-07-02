@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'hasokeyk/markabul',
+        'name' => 'hasokeyk/markabu',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
         'reference' => '4620a1406b4309cc38110d217efd2bb042884218',
@@ -10,7 +10,7 @@
         'dev' => true,
     ),
     'versions' => array(
-        'hasokeyk/markabul' => array(
+        'hasokeyk/markabu' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
             'reference' => '4620a1406b4309cc38110d217efd2bb042884218',

@@ -65,7 +65,7 @@
 
                 if(isset($product_info->content[0])){
                     $product_content_id = $product_info->content[0]->productContentId;
-                    $url = 'https://public-mdc.markabul.com/discovery-web-socialgw-service/api/questions/answered/filter?page=0&storefrontId=1&culture=tr-TR&sellerId='.$this->supplierId.'&contentId='.$product_content_id;
+                    $url = 'https://public-mdc.markabu.com/discovery-web-socialgw-service/api/questions/answered/filter?page=0&storefrontId=1&culture=tr-TR&sellerId='.$this->supplierId.'&contentId='.$product_content_id;
                     $body = $this->request()->get($url);
                     return $body;
                 }

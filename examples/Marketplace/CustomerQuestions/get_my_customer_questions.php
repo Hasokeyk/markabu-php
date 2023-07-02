@@ -1,6 +1,6 @@
 <?php
 
-    //Source : https://developers.markabul.com/tr/marketplace-entegrasyonu/soru-cevap-entegrasyonu/musteri-sorularini-cekme
+    //Source : https://developers.markabu.com/tr/marketplace-entegrasyonu/soru-cevap-entegrasyonu/musteri-sorularini-cekme
 
     use Hasokeyk\Markabul\Markabul;
 
@@ -10,12 +10,12 @@
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_customer_questions = $markabul->marketplace->MarkabulMarketplaceCustomerQuestions();
+    $markabu_marketplace_customer_questions = $markabu->marketplace->MarkabulMarketplaceCustomerQuestions();
 
     $filter             = [
         'status' => 'WAITING_FOR_ANSWER', //WAITING_FOR_ANSWER, WAITING_FOR_APPROVE, ANSWERED, REPORTED, REJECTED
     ];
-    $customer_questions = $markabul_marketplace_customer_questions->get_my_customer_questions($filter);
+    $customer_questions = $markabu_marketplace_customer_questions->get_my_customer_questions($filter);
     print_r($customer_questions);

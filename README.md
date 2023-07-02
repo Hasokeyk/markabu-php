@@ -8,13 +8,13 @@
 Aşağıdaki komutu çalışma dizininizde açtığınız bir terminale yazarsanız kütüphaneyi kullanmaya başlayabilirsiniz
 
 ```shell
-composer require hasokeyk/markabul
+composer require hasokeyk/markabu
 ```
 
 # Kullanım
 
 ### Markabul bağlantısı
-Aşağıdaki örnek kod ile markabul bağlantınızı yapabilirsiniz
+Aşağıdaki örnek kod ile markabu bağlantınızı yapabilirsiniz
 
 ```php
 <?php
@@ -27,7 +27,7 @@ Aşağıdaki örnek kod ile markabul bağlantınızı yapabilirsiniz
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 ```
 
 # Markabul Marketplace İşlemleri
@@ -46,11 +46,11 @@ Markabul'a kayıtlı olan tüm markaların listesini bu kodlar ile çekebilirsin
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_brands = $markabul->marketplace->MarkabulMarketplaceBrands();
+    $markabu_marketplace_brands = $markabu->marketplace->MarkabulMarketplaceBrands();
 
-    $brands = $markabul_marketplace_brands->get_brands();
+    $brands = $markabu_marketplace_brands->get_brands();
     print_r($brands);
 ```
 
@@ -68,11 +68,11 @@ Markabul'a kendi markanızı veya başka markaları aratabilirsiniz.
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_brands = $markabul->marketplace->MarkabulMarketplaceBrands();
+    $markabu_marketplace_brands = $markabu->marketplace->MarkabulMarketplaceBrands();
 
-    $brands = $markabul_marketplace_brands->search_brand('Herkes Alıyo');
+    $brands = $markabu_marketplace_brands->search_brand('Herkes Alıyo');
     print_r($brands);
 ```
 
@@ -90,11 +90,11 @@ Markabuldaki tüm kategorileri ve komisyonlarını çekebilirsiniz.
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_categories = $markabul->marketplace->MarkabulMarketplaceCategories();
+    $markabu_marketplace_categories = $markabu->marketplace->MarkabulMarketplaceCategories();
 
-    $categories = $markabul_marketplace_categories->get_categories();
+    $categories = $markabu_marketplace_categories->get_categories();
     print_r($categories);
 ```
 
@@ -112,11 +112,11 @@ Markabuldaki belirlediğiniz kategorilerin bilgilerini ve komisyonunu çekebilir
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_categories = $markabul->marketplace->MarkabulMarketplaceCategories();
+    $markabu_marketplace_categories = $markabu->marketplace->MarkabulMarketplaceCategories();
 
-    $categories = $markabul_marketplace_categories->get_category_info(2610);
+    $categories = $markabu_marketplace_categories->get_category_info(2610);
     print_r($categories);
 ```
 ### Siparişleri Çekmek
@@ -133,14 +133,14 @@ Markabuldaki mağazanıza ait tüm siparişleri çekebilirsiniz.
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_order = $markabul->marketplace->MarkabulMarketplaceOrders();
+    $markabu_marketplace_order = $markabu->marketplace->MarkabulMarketplaceOrders();
 
     $filter = [
         'status' => 'Created',//Created, Picking, Invoiced, Shipped ,Cancelled, Delivered, UnDelivered, Returned, Repack, UnPacked, UnSupplied
     ];
-    $orders = $markabul_marketplace_order->get_my_orders($filter);
+    $orders = $markabu_marketplace_order->get_my_orders($filter);
     print_r($orders);
 ```
 
@@ -158,17 +158,17 @@ Markabuldaki mağazanıza ait tüm ürünleri çekebilirsiniz.
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_products = $markabul->marketplace->MarkabulMarketplaceProducts();
+    $markabu_marketplace_products = $markabu->marketplace->MarkabulMarketplaceProducts();
 
     $filter    = [
         'approved' => 'true',
     ];
-    $products = $markabul_marketplace_products->get_my_products($filter);
+    $products = $markabu_marketplace_products->get_my_products($filter);
     print_r($products);
 ```
 
 ## Diğer tüm özellikler için aşağıdaki linki kullanabilirsiniz.
 
-https://github.com/Hasokeyk/markabul-php/tree/main/examples/Marketplace
+https://github.com/Hasokeyk/markabu-php/tree/main/examples/Marketplace

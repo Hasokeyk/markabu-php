@@ -1,12 +1,12 @@
 {
-  "name"              : "hasokeyk/markabul",
-  "description"       : "Basit Markabul PHP API",
+  "name"              : "hasokeyk/markabu",
+  "description"       : "Basit Markabu PHP API",
   "type"              : "library",
   "keywords"          : [
-    "markabul",
+    "markabu",
     "eticaret",
     "php api",
-    "markabul php api",
+    "markabu php api",
     "pazaryeri"
   ],
   "license"           : "MIT",
@@ -22,7 +22,7 @@
   },
   "autoload"          : {
     "psr-4" : {
-      "Hasokeyk\\Markabul\\" : "src/markabul"
+      "Hasokeyk\\Markabul\\" : "src/markabu"
     }
   },
   "minimum-stability" : "stable"

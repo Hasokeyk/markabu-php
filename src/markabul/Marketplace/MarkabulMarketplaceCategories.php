@@ -27,7 +27,7 @@
         }
 
         public function get_my_categories(){
-            $url    = 'https://www.markabul.com/sr?mid='.$this->supplierId;
+            $url    = 'https://www.markabu.com/sr?mid='.$this->supplierId;
             $result = file_get_contents($url);
             preg_match_all('/{"id":"\d+","text":"([^"]+)","beautifiedName":"[^"]+","count":([^"]+),"filtered":false,"filterField":"(webCategoryIds|leafCategoryIds)","type":"(WebCategory|LeafCategory)","url":"[^"]+"}/', $result, $matches);
 
@@ -36,7 +36,7 @@
             foreach($matches[1] as $id => $match){
 
                 $category_info_json = json_decode(file_get_contents((__DIR__).'/../assets/category_info.json'), true);
-                $keys               = $this->markabul_array_search($category_info_json['Categories'], 'Name', trim($match));
+                $keys               = $this->markabu_array_search($category_info_json['Categories'], 'Name', trim($match));
 
                 $supplider_cats[] = [
                     'cat_id'   => trim($keys['Id']),
@@ -54,25 +54,25 @@
 
         public function get_category_info($category_id = null){
             $category_info_json = json_decode(file_get_contents((__DIR__).'/../assets/category_info.json'), true);
-            $keys               = $this->markabul_array_search($category_info_json['Categories'], 'Id', $category_id);
+            $keys               = $this->markabu_array_search($category_info_json['Categories'], 'Id', $category_id);
             $url                = 'https://api-az.markabu.com/v1/sapigw/product-categories/'.$category_id.'/attributes';
             $result             = $this->request()->get($url);
             $result->commission = $keys['Commission'] ?? 0;
             return $result;
         }
 
-        public $markabul_array_search_result = null;
+        public $markabu_array_search_result = null;
 
-        public function markabul_array_search($data = [], $key = null, $value = null){
+        public function markabu_array_search($data = [], $key = null, $value = null){
             if(isset($data) and $data != null){
                 foreach($data as $category){
 
                     if(isset($category[$key]) and ($category[$key] == $value or $this->calculateSimilarityScore($category[$key], $value) > 80)){
-                        $this->markabul_array_search_result = $category;
+                        $this->markabu_array_search_result = $category;
                     }
 
                     if(isset($category['Nodes']) and $category['Nodes'] != null){
-                        $this->markabul_array_search($category['Nodes'], $key, $value);
+                        $this->markabu_array_search($category['Nodes'], $key, $value);
                     }
 
                 }
@@ -80,7 +80,7 @@
             else{
                 return 2;
             }
-            return $this->markabul_array_search_result;
+            return $this->markabu_array_search_result;
         }
 
         private function calculateSimilarityScore($string1, $string2){

@@ -1,6 +1,6 @@
 <?php
 
-    //Source : https://developers.markabul.com/docs/marketplace/urun-entegrasyonu/markabul-marka-listesi
+    //Source : https://developers.markabu.com/docs/marketplace/urun-entegrasyonu/markabu-marka-listesi
 
     use Hasokeyk\Markabul\Markabul;
 
@@ -10,9 +10,9 @@
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_addresses = $markabul->marketplace->MarkabulMarketplaceAddresses();
+    $markabu_marketplace_addresses = $markabu->marketplace->MarkabulMarketplaceAddresses();
 
-    $addresses = $markabul_marketplace_addresses->get_my_addresses();
+    $addresses = $markabu_marketplace_addresses->get_my_addresses();
     print_r($addresses);

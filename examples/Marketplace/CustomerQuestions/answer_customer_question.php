@@ -1,6 +1,6 @@
 <?php
 
-    //Source : https://developers.markabul.com/tr/marketplace-entegrasyonu/soru-cevap-entegrasyonu/musteri-sorularini-cevaplama
+    //Source : https://developers.markabu.com/tr/marketplace-entegrasyonu/soru-cevap-entegrasyonu/musteri-sorularini-cevaplama
 
     use Hasokeyk\Markabul\Markabul;
 
@@ -10,9 +10,9 @@
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_customer_questions = $markabul->marketplace->MarkabulMarketplaceCustomerQuestions();
+    $markabu_marketplace_customer_questions = $markabu->marketplace->MarkabulMarketplaceCustomerQuestions();
 
-    $customer_questions = $markabul_marketplace_customer_questions->answer_customer_question(12,'Dünyanın en güzel sorusunun cevabı');
+    $customer_questions = $markabu_marketplace_customer_questions->answer_customer_question(12,'Dünyanın en güzel sorusunun cevabı');
     print_r($customer_questions);

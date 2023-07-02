@@ -8,9 +8,9 @@
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_categories = $markabul->marketplace->MarkabulMarketplaceCategories();
+    $markabu_marketplace_categories = $markabu->marketplace->MarkabulMarketplaceCategories();
 
-    $categories = $markabul_marketplace_categories->get_my_categories();
+    $categories = $markabu_marketplace_categories->get_my_categories();
     print_r($categories);

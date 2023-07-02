@@ -1,6 +1,6 @@
 <?php
 
-    //Source : https://developers.markabul.com/tr/marketplace-entegrasyonu/urun-entegrasyonu/v2/urun-aktarma-2
+    //Source : https://developers.markabu.com/tr/marketplace-entegrasyonu/urun-entegrasyonu/v2/urun-aktarma-2
 
     use Hasokeyk\Markabul\Markabul;
 
@@ -10,9 +10,9 @@
     $username   = 'XXXXXXXXXXXXXXXXXXXX';
     $password   = 'XXXXXXXXXXXXXXXXXXXX';
 
-    $markabul = new Markabul($supplierId, $username, $password);
+    $markabu = new Markabul($supplierId, $username, $password);
 
-    $markabul_marketplace_products = $markabul->marketplace->MarkabulMarketplaceProducts();
+    $markabu_marketplace_products = $markabu->marketplace->MarkabulMarketplaceProducts();
 
     $data = [
         'barcode'            => 'XXXXXXX',
@@ -33,5 +33,5 @@
         ],
     ];
 
-    $product = $markabul_marketplace_products->create_product($data);
+    $product = $markabu_marketplace_products->create_product($data);
     print_r($product);
