@@ -1,0 +1,29 @@
+{
+  "name"              : "hasokeyk/markabul",
+  "description"       : "Basit Markabul PHP API",
+  "type"              : "library",
+  "keywords"          : [
+    "markabul",
+    "eticaret",
+    "php api",
+    "markabul php api",
+    "pazaryeri"
+  ],
+  "license"           : "MIT",
+  "authors"           : [
+    {
+      "name"  : "Hasan Yüksektepe",
+      "email" : "hasanhasokeyk@hotmail.com"
+    }
+  ],
+  "require"           : {
+    "ext-curl" : "*",
+    "ext-json" : "*"
+  },
+  "autoload"          : {
+    "psr-4" : {
+      "Hasokeyk\\Markabul\\" : "src/markabul"
+    }
+  },
+  "minimum-stability" : "stable"
+}
