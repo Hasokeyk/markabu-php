@@ -21,7 +21,7 @@
         }
 
         public function get_my_addresses(){
-            $url    = 'https://api-az.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/addresses';
+            $url    = 'https://api.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/addresses';
             $result = $this->request()->get($url);
             return $result;
         }

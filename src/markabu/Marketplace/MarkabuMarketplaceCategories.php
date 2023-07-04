@@ -21,7 +21,7 @@
         }
 
         public function get_categories(){
-            $url    = 'https://api-az.markabu.com/v1/sapigw-product/product-categories';
+            $url    = 'https://api.markabu.com/v1/sapigw-product/product-categories';
             $result = $this->request()->get($url);
             return $result;
         }
@@ -55,7 +55,7 @@
         public function get_category_info($category_id = null){
             $category_info_json = json_decode(file_get_contents((__DIR__).'/../assets/category_info.json'), true);
             $keys               = $this->markabu_array_search($category_info_json['Categories'], 'Id', $category_id);
-            $url                = 'https://api-az.markabu.com/v1/sapigw/product-categories/'.$category_id.'/attributes';
+            $url                = 'https://api.markabu.com/v1/sapigw/product-categories/'.$category_id.'/attributes';
             $result             = $this->request()->get($url);
             $result->commission = $keys['Commission'] ?? 0;
             return $result;

@@ -25,7 +25,7 @@
 		}
 
 		public function get_my_products($filter = []){
-			$url = 'https://api-az.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/products';
+			$url = 'https://api.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/products';
 
 			$required_query_data = [
 				'barcode'       => null,
@@ -78,7 +78,7 @@
 		}
 
 		public function create_product($data = []){
-			$url = 'https://api-az.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/v2/products';
+			$url = 'https://api.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/v2/products';
 
 			$post_data = [
 				'items' => [
@@ -121,7 +121,7 @@
 		}
 
 		public function update_product_info($barcode = null, $data = []){
-			$url = 'https://api-az.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/v2/products';
+			$url = 'https://api.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/v2/products';
 
 			$post_data = [
 				'items' => [
@@ -161,7 +161,7 @@
 		}
 
 		public function update_product_price_and_stock($barcode = null, $quantity = null, $sale_price = null, $list_price = null){
-			$url = 'https://api-az.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/products/price-and-inventory';
+			$url = 'https://api.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/products/price-and-inventory';
 
 			$post_data = [
 				'items' => [
@@ -181,7 +181,7 @@
 		}
 
 		public function get_batch_request_result($batch_id = null){
-			$url    = 'https://api-az.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/products/batch-requests/'.$batch_id;
+			$url    = 'https://api.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/products/batch-requests/'.$batch_id;
 			$result = $this->request()->get($url);
 			return $result;
 		}

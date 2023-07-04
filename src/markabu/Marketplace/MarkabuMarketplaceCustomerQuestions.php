@@ -25,7 +25,7 @@
         }
 
         public function get_my_customer_questions($filter){
-            $url                 = 'https://api-az.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/questions/filter';
+            $url                 = 'https://api.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/questions/filter';
             $required_query_data = [
                 'barcode'            => null,
                 'page'               => null,
@@ -46,7 +46,7 @@
         }
 
         public function answer_customer_question($question_id = null, $answer = null){
-            $url = 'https://api-az.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/questions/'.$question_id.'/answers';
+            $url = 'https://api.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/questions/'.$question_id.'/answers';
 
             $post_data = [
                 'text' => $answer,

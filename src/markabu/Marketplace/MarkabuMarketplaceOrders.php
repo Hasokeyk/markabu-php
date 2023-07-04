@@ -21,7 +21,7 @@
         }
 
         public function get_my_orders($filter = []){
-            $url = 'https://api-az.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/orders';
+            $url = 'https://api.markabu.com/v1/sapigw/suppliers/'.$this->supplierId.'/orders';
 
             $required_query_data = [
                 'startDate'          => null,

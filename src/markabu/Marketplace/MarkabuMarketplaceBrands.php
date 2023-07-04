@@ -21,13 +21,13 @@
         }
 
         public function get_brands(){
-            $url = 'https://api-az.markabu.com/v1/sapigw/brands';
+            $url = 'https://api.markabu.com/v1/sapigw/brands';
             $result = $this->request()->get($url);
             return $result;
         }
 
         public function search_brand($brand_name = null){
-            $url    = 'https://api-az.markabu.com/v1/sapigw/brands/by-name?name='.$brand_name;
+            $url    = 'https://api.markabu.com/v1/sapigw/brands/by-name?name='.$brand_name;
             $result = $this->request()->get($url);
             return $result;
         }
