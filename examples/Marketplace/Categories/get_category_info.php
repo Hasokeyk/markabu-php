@@ -14,5 +14,5 @@
 
     $markabu_marketplace_categories = $markabu->marketplace->MarkabuMarketplaceCategories();
 
-    $categories = $markabu_marketplace_categories->get_category_info(2610);
+    $categories = $markabu_marketplace_categories->get_categories(2610);
     print_r($categories);

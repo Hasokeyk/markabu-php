@@ -38,7 +38,6 @@
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
             $result = curl_exec($ch);
-
             if(empty($result)){
                 throw new Exception("Markabu boş yanıt döndürdü.");
             }
